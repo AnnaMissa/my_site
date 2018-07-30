@@ -1,0 +1,9 @@
+{% if new_product_list %}
+    <ul>
+    {% for product in new_product_list %}
+        <li><a href="{% url 'shop:product_detail' product.id %}">{{ product.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No products.</p>
+{% endif %}

@@ -6,6 +6,8 @@ class ProductCategory(models.Model):
     Модель категории товара
     """
     name = models.CharField(max_length=100)
+    create_date = models.DateField(auto_now_add=True)
+    write_date = models.DateField(auto_now=True)
 
     def __str__(self):
         return self.name

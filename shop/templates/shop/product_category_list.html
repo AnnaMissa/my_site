@@ -1,0 +1,11 @@
+<h2>Категории продуктов</h2>
+{% if product_category_list %}
+    <ul>
+    {% for category in product_category_list %}
+        <li><a href="{% url 'shop:product_list' category.id %}">{{ category.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Категорий нет.</p>
+{% endif %}
+
